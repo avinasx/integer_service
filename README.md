@@ -1,5 +1,6 @@
 # integer_service
 REST endpoint that returns the next available integer.
+
 problem statement: https://gist.github.com/ankitwww/a519ebfd040bc171554ea2e9c0cfbe3e
 
 
@@ -19,15 +20,14 @@ problem statement: https://gist.github.com/ankitwww/a519ebfd040bc171554ea2e9c0cf
 
 ## USAGE
 
-### 1. signup
+#### 1. signup
 
 `curl --location --request POST 'localhost:3000/user/signup/' --header 'Content-Type: application/json' --data-raw '{
    "email":"mail@domain.com",
    "password":"something"
 }'`
 
-
-### 2. Login
+#### 2. Login
 
 `
 curl --location --request POST 'localhost:3000/user/login' --header 'Content-Type: application/json' --data-raw '{
@@ -43,11 +43,11 @@ will return :
  
  use this token to send in header to  get current/next integer and reset integer.
  
- ### 3. Get Current Integer(by default 0 for all users)
+#### 3. Get Current Integer(by default '0' for all users)
  
  `curl  'localhost:3000/v1/current --header 'Authorization: Bearer XXXXX'`
 
-### 4. Get Next Integer(increment for specific user)
+#### 4. Get Next Integer(logged-in-user specific increment)
 
 `curl  'localhost:3000/v1/next' --header 'Authorization: Bearer XXXXX'`
  
