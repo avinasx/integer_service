@@ -15,7 +15,7 @@ problem statement: https://gist.github.com/ankitwww/a519ebfd040bc171554ea2e9c0cf
  0. Install [NodeJS](https://nodejs.org/en/) 
  1. run `npm init` to install packages
  2. run `npm start` to start server, default port is `3000`
- 3. Instal CURL
+ 3. Install CURL
 
 
 ## USAGE
