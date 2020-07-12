@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const v1Routs = require('./api/routes/v1');
 const mongoose = require('mongoose');
 const userRouts = require('./api/routes/user');
+const path = require("path");
+
 
 mongoose.connect(
     'mongodb+srv://admin:' + process.env.MONGO_ATLAS_PW + '@assignment.evhld.mongodb.net/<dbname>?retryWrites=true&w=majority',
@@ -35,6 +37,9 @@ app.use((req, res, next) => {
     }
     next();
 });
+app.get('/', (req, res, next)=>{
+    res.sendFile(path.join(__dirname + '/api//views/v1.html'));
+});
 
 app.use('/v1', v1Routs);
 app.use('/user', userRouts);
@@ -53,5 +58,7 @@ app.use((error, req, res, next) => {
         }
     });
 });
+
+
 
 module.exports = app; 
