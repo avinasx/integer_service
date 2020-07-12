@@ -20,7 +20,7 @@ problem statement: https://gist.github.com/ankitwww/a519ebfd040bc171554ea2e9c0cf
 
 ## USAGE
 
-#### 1. signup
+#### 1. SignUp
 
 `curl --location --request POST 'hostname:3000/user/signup/' --header 'Content-Type: application/json' --data-raw '{
    "email":"mail@domain.com",
@@ -43,11 +43,11 @@ will return :
  
  use this token to send in header to  get current/next integer and reset integer.
  
-#### 3. Get Current Integer(by default '0' for all users)
+#### 3. Get current Integer(by default '0' for all users)
  
  `curl  'hostname:3000/v1/current --header 'Authorization: Bearer XXXXX'`
 
-#### 4. Get Next Integer(logged-in-user specific increment)
+#### 4. Get next Integer(logged-in-user specific increment)
 
 `curl  'hostname:3000/v1/next' --header 'Authorization: Bearer XXXXX'`
  
