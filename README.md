@@ -20,17 +20,21 @@ problem statement: https://gist.github.com/ankitwww/a519ebfd040bc171554ea2e9c0cf
 
 ## USAGE
 
+**Replace hostname with  http://ec2-13-234-59-145.ap-south-1.compute.amazonaws.com for demo(port 80)**
+**Replace http://ec2-13-234-59-145.ap-south-1.compute.amazonaws.com  with http://localhost:3000 for development**
 #### 1. SignUp
 
-`curl --location --request POST 'https://hostname:3000/user/signup/' --header 'Content-Type: application/json' --data-raw '{
+`curl --location --request POST 'http://ec2-13-234-59-145.ap-south-1.compute.amazonaws.com/user/signup/' --header 'Content-Type: application/json' --data-raw '{
    "email":"mail@domain.com",
    "password":"something"
 }'`
 
+or demo at
+
 #### 2. Login
 
 `
-curl --location --request POST 'https://hostname:3000/user/login' --header 'Content-Type: application/json' --data-raw '{
+curl --location --request POST 'http://ec2-13-234-59-145.ap-south-1.compute.amazonaws.com/user/login' --header 'Content-Type: application/json' --data-raw '{
    "email":"mail@domain.com",
    "password":"something"
 }'`
@@ -45,21 +49,21 @@ will return :
  
 #### 3. Get current Integer(by default '0' for all users)
  
- `curl  'https://hostname:3000/v1/current --header 'Authorization: Bearer XXXXX'`
+ `curl  'http://ec2-13-234-59-145.ap-south-1.compute.amazonaws.com/v1/current --header 'Authorization: Bearer XXXXX'`
 
 #### 4. Get next Integer(logged-in-user specific increment)
 
-`curl  'https://hostname:3000/v1/next' --header 'Authorization: Bearer XXXXX'`
+`curl  'http://ec2-13-234-59-145.ap-south-1.compute.amazonaws.com/v1/next' --header 'Authorization: Bearer XXXXX'`
  
 #### 5. Reset integer to desired value(two ways)
 
 With content type: Content-Type: application/x-www-form-urlencoded. (here 10 is the desired value)
 
-`curl --location --request PUT 'https://hostname:3000/v1/current' --header 'Authorization: Bearer XXXXX' --data 'current=10'`
+`curl --location --request PUT 'http://ec2-13-234-59-145.ap-south-1.compute.amazonaws.com/v1/current' --header 'Authorization: Bearer XXXXX' --data 'current=10'`
 
 Or by passing it as a parameter. (here 10 is the desired value)
 
-`curl  'https://hostname:3000/v1/reset/10' --header 'Authorization: Bearer XXXXX'`
+`curl  'http://ec2-13-234-59-145.ap-south-1.compute.amazonaws.com/v1/reset/10' --header 'Authorization: Bearer XXXXX'`
 
 
 
