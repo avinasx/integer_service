@@ -30,8 +30,6 @@ problem statement: https://gist.github.com/ankitwww/a519ebfd040bc171554ea2e9c0cf
    "password":"something"
 }'`
 
-or demo at
-
 #### 2. Login
 
 `
