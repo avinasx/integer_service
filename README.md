@@ -51,7 +51,7 @@ will return :
 
 `curl  'hostname:3000/v1/next' --header 'Authorization: Bearer XXXXX'`
  
-### 5. Reset integer to desired value(two ways)
+#### 5. Reset integer to desired value(two ways)
 
 With content type: Content-Type: application/x-www-form-urlencoded. (here 10 is the desired value)
 
