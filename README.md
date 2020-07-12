@@ -21,9 +21,7 @@ problem statement: https://gist.github.com/ankitwww/a519ebfd040bc171554ea2e9c0cf
 
 ### 1. signup
 
-`curl --location --request POST 'localhost:3000/user/signup/' \
---header 'Content-Type: application/json' \
---data-raw '{
+`curl --location --request POST 'localhost:3000/user/signup/' --header 'Content-Type: application/json' --data-raw '{
    "email":"mail@domain.com",
    "password":"something"
 }'`
@@ -32,9 +30,7 @@ problem statement: https://gist.github.com/ankitwww/a519ebfd040bc171554ea2e9c0cf
 ### 2. Login
 
 `
-curl --location --request POST 'localhost:3000/user/login' \
---header 'Content-Type: application/json' \
---data-raw '{
+curl --location --request POST 'localhost:3000/user/login' --header 'Content-Type: application/json' --data-raw '{
    "email":"mail@domain.com",
    "password":"something"
 }'`
