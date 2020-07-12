@@ -22,7 +22,7 @@ problem statement: https://gist.github.com/ankitwww/a519ebfd040bc171554ea2e9c0cf
 
 #### 1. signup
 
-`curl --location --request POST 'localhost:3000/user/signup/' --header 'Content-Type: application/json' --data-raw '{
+`curl --location --request POST 'hostname:3000/user/signup/' --header 'Content-Type: application/json' --data-raw '{
    "email":"mail@domain.com",
    "password":"something"
 }'`
@@ -30,7 +30,7 @@ problem statement: https://gist.github.com/ankitwww/a519ebfd040bc171554ea2e9c0cf
 #### 2. Login
 
 `
-curl --location --request POST 'localhost:3000/user/login' --header 'Content-Type: application/json' --data-raw '{
+curl --location --request POST 'hostname:3000/user/login' --header 'Content-Type: application/json' --data-raw '{
    "email":"mail@domain.com",
    "password":"something"
 }'`
@@ -45,11 +45,11 @@ will return :
  
 #### 3. Get Current Integer(by default '0' for all users)
  
- `curl  'localhost:3000/v1/current --header 'Authorization: Bearer XXXXX'`
+ `curl  'hostname:3000/v1/current --header 'Authorization: Bearer XXXXX'`
 
 #### 4. Get Next Integer(logged-in-user specific increment)
 
-`curl  'localhost:3000/v1/next' --header 'Authorization: Bearer XXXXX'`
+`curl  'hostname:3000/v1/next' --header 'Authorization: Bearer XXXXX'`
  
 ### 5. Reset integer to desired value(two ways)
 
@@ -59,7 +59,7 @@ With content type: Content-Type: application/x-www-form-urlencoded. (here 10 is 
 
 Or by passing it as a parameter. (here 10 is the desired value)
 
-`curl  'localhost:3000/v1/reset/10' --header 'Authorization: Bearer XXXXX'`
+`curl  'hostname:3000/v1/reset/10' --header 'Authorization: Bearer XXXXX'`
 
 
 
