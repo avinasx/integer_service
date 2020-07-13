@@ -20,11 +20,11 @@ problem statement: https://gist.github.com/ankitwww/a519ebfd040bc171554ea2e9c0cf
 
 ## End Points
 
-   1. /user/signup/
-   2. /user/login
-   3. /v1/current
-   4. /v1/next
-   5. /v1/reset/
+   1. `/user/signup`
+   2. `/user/login`
+   3. `/v1/current`
+   4. `/v1/next`
+   5. `/v1/reset`
 
 ## USAGE
 
