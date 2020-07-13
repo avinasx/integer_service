@@ -18,11 +18,20 @@ problem statement: https://gist.github.com/ankitwww/a519ebfd040bc171554ea2e9c0cf
  3. Install CURL
 
 
+## End Points
+
+   1. /user/signup/
+   2. /user/login
+   3. /v1/current
+   4. /v1/next
+   5. /v1/reset/
+
 ## USAGE
 
 **Replace hostname with  http://ec2-13-234-59-145.ap-south-1.compute.amazonaws.com for demo(port 80)**
 
 **Replace http://ec2-13-234-59-145.ap-south-1.compute.amazonaws.com  with http://localhost:3000 for development**
+
 #### 1. SignUp
 
 `curl --location --request POST 'http://ec2-13-234-59-145.ap-south-1.compute.amazonaws.com/user/signup/' --header 'Content-Type: application/json' --data-raw '{
